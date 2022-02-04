@@ -10,14 +10,24 @@ Take a screenshot of a web page using a headless web browser. This solution focu
 
 
 ## **How to run application**
-1. change directory to prohect folder
-   - $cd /project/WebPage_Screenshot 
-2. start web application
-   - $node ./website/app.js 
+1. go to project folder
+```
+$ cd ./WebPage_Screenshot 
+ ```
+2. start web application (required Nodejs)
+```
+$ node ./website/app.js 
+```
 3. start NATS message broker
-   - $./tool/nats-server
+```
+$ ./tool/nats-server
+```
 4. start screenshot capture application
-   - $node ./screenshot/phantompool.js
+```
+$ node ./screenshot/phantompool.js
+```
 5. appned list of url to ./client/url.txt file
 6. run golan client application (golang app folder sould be appended to $GOPATH OS env variable)
-   - $go run ./client/main.go
+```
+$ go run ./client/main.go
+```
